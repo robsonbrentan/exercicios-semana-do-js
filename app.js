@@ -6,6 +6,13 @@
 */
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
+const numbersOdd = randomNumbers.filter (number => {
+  if (randomNumbers.number += number %2=0) {
+    return randomNumbers
+  }
+}
+
+console.log (numbersOdd)
 
 /*
   02
