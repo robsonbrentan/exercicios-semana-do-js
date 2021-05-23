@@ -4,9 +4,10 @@
   - Gere um novo array com apenas os números ímpares do array abaixo e exiba 
     o novo array no console.
 */
+const getOddNumbers = item => item %2 === 1
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
-const numbersOdd = randomNumbers.filter (item => item %2)
+const numbersOdd = randomNumbers.filter (getOddNumbers)
 
 console.log (numbersOdd)
 
@@ -53,7 +54,7 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
-const moviesBelow2000 = tarantinoMovies.filter (tarantinoMovies => tarantinoMovies.release<2000)
+const moviesBelow2000 = tarantinoMovies.filter (({ release }) => release <2000)
 
 console.log (moviesBelow2000)
 
@@ -102,3 +103,9 @@ const cart = [
   - Nome 2
   - Nome 3
 */
+
+const productList = cart.reduce((accumulator, product) => {
+  return `${accumulator}- ${product.name}\n`
+},'')
+
+console.table (productList)
